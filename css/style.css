@@ -417,6 +417,10 @@ header .container {
   margin-bottom: 16px;
 }
 
+.footer-container-social {
+  margin-right: 80px;
+}
+
 .container-social-link-footer {
   gap: 16px;
 }
@@ -441,6 +445,82 @@ header .container {
   background-color: #31d0aa;
 }
 
+.subscribe-container {
+  display: flex;
+}
+
+.label-subscribe {
+  display: flex;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.input-subscribe {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #2e2f42;
+  padding: 0 16px;
+  margin-right: 24px;
+}
+
+.input-subscribe::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.input-subscribe[type="email"] {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.button-subscribe {
+  max-width: 165px;
+  border-radius: 4px;
+  padding: 8px 24px;
+  background: #4d5ae5;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-button {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-container .icon {
+  fill: #fff;
+}
+
+.button-subscribe:hover,
+.button-subscribe:focus {
+  background-color: #404bbf;
+}
+
 /* modal overlay */
 
 .modal-overlay {
@@ -454,6 +534,14 @@ header .container {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal {
@@ -462,7 +550,6 @@ header .container {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   width: 408px;
-  height: 584px;
   padding: 72px 24px 24px 24px;
 }
 
@@ -500,7 +587,66 @@ header .container {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+}
+
+.input-container {
+  margin-bottom: 8px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+
+.form-input-textarea {
+  width: 360px;
+  height: 138px;
+  resize: none;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.form-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding-left: 38px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2e2f42;
+}
+
+.modal-input-wrap:active .form-input-icon {
+  fill: #4d5ae5;
+}
+
+.modal-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-input-icon {
+  position: absolute;
+  left: 19px;
+}
+
+.input-container-textarea {
+  margin-bottom: 16px;
+}
+
+.form-input-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .form-button {
@@ -526,34 +672,9 @@ header .container {
   background-color: #404bbf;
 }
 
-.form-input {
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  padding: 8px 16px;
-  position: relative;
-}
-
-.form-input-icon {
-  position: absolute;
-}
-
-textarea {
-  width: 360px;
-  height: 138px;
-}
-
 input:focus-within {
   border: 1px solid #4d5ae5;
   border-radius: 4px;
-}
-
-.form-label {
-  display: flex;
-  flex-direction: column;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
 }
 
 input::placeholder {
@@ -563,13 +684,8 @@ input::placeholder {
   color: rgba(46, 47, 66, 0.4);
 }
 
-textarea {
-  resize: none;
-}
-
 .modal-field {
   margin-bottom: 24px;
-  margin-top: 16px;
 }
 
 .input-check-text {
@@ -606,6 +722,7 @@ textarea {
   cursor: pointer;
   vertical-align: sub;
   margin-right: 8px;
+  fill: transparent;
 }
 
 .input-check-icon {

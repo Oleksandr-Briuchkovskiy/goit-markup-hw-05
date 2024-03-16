@@ -381,8 +381,25 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe-container">
+          <form>
+            <label class="label-subscribe">Subscribe</label>
+            <div class="container-button">
+              <input class="input-subscribe" type="email" name="email" placeholder="E-mail" />
+              <button class="button-subscribe" type="submit">
+                Subscribe
+                <span class="icon-container">
+                  <svg class="icon" width="24" height="20">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
+    <!-- modal overlay -->
     <div class="modal-overlay">
       <div class="modal">
         <div class="close-modal">
@@ -392,27 +409,44 @@
         </div>
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="form" name="feedback_form" autocomplete="off">
-          <label class="form-label">
-            Name
-            <input class="form-input" type="text" name="username" />
-            <svg class="form-input-icon" width="12" height="12">
-              <use href="./images/icons.svg#icon-name"></use>
-            </svg>
-          </label>
-          <label class="form-label">
-            Phone
-            <input class="form-input" type="tel" name="phone" />
-          </label>
-          <label class="form-label">
-            Email
-            <input class="form-input" type="email" name="email" />
-          </label>
-          <label class="form-label">
-            Comment
-            <textarea class="form-input" type="text" name="comment" placeholder="Text input"></textarea>
-          </label>
+          <div class="input-container">
+            <label class="form-label" for="user-name">Name</label>
+            <div class="modal-input-wrap">
+              <input class="form-input" id="user-name" name="username" type="text" />
+              <svg class="form-input-icon" width="12" height="12">
+                <use href="./images/icons.svg#icon-name"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label class="form-label" for="user-phone">Phone</label>
+            <div class="modal-input-wrap">
+              <input class="form-input" type="tel" name="phone" />
+              <svg class="form-input-icon" width="13" height="13">
+                <use href="./images/icons.svg#icon-tell"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label class="form-label" for="user-email">Email</label>
+            <div class="modal-input-wrap">
+              <input class="form-input" type="email" name="email" />
+              <svg class="form-input-icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-container-textarea">
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea class="form-input-textarea" type="text" name="comment" placeholder="Text input"></textarea>
+          </div>
+
+          <!-- checkbox -->
           <div class="modal-field check-field">
-            <input class="input-check visually-hidden-checkbox" type="checkbox" name="user-privacy" value="true" />
+            <input class="input-check visually-hidden-checkbox" id="user-privacy" type="checkbox" name="user-privacy" value="true" />
             <label class="input-check-text" for="user-privacy">
               <span class="check-empty">
                 <svg class="input-check-icon" width="10" height="8">
