@@ -588,7 +588,7 @@ textarea {
   color: #4d5ae5;
 }
 
-.input-check {
+.visually-hidden-checkbox {
   width: 0;
   height: 0;
   opacity: 0;
@@ -613,7 +613,10 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: none;
+}
+
+.input-check {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-check:checked + .input-check-text > .check-empty {
